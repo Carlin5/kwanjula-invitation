@@ -7,7 +7,7 @@ const details = [
     icon: "📅",
     label: "Date",
     value: "28th June, 2026",
-    sub: "Saturday",
+    sub: "Sunday",
   },
   {
     icon: "📍",
