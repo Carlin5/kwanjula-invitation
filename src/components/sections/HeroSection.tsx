@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/couple-1.jpg"
+          src="/images/couple-hero.jpg"
           alt="Abdul Rahman and Bushrah"
           fill
           className="object-cover"

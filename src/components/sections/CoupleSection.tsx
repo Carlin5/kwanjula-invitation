@@ -35,7 +35,7 @@ export default function CoupleSection() {
         >
           <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 rounded-full overflow-hidden border-4 border-[var(--gold)] shadow-lg">
             <Image
-              src="/images/couple-5.jpg"
+              src="/images/abdulrahman-suit.jpg"
               alt="Mr Abdul Rahman"
               fill
               className="object-cover object-top"
@@ -60,7 +60,7 @@ export default function CoupleSection() {
         >
           <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 rounded-full overflow-hidden border-4 border-[var(--gold)] shadow-lg">
             <Image
-              src="/images/bushrah-solo-1.jpg"
+              src="/images/bushrah-abaya.jpg"
               alt="Mrs Bushrah"
               fill
               className="object-cover object-top"

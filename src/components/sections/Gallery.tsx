@@ -5,14 +5,16 @@ import Image from "next/image";
 import { useState } from "react";
 
 const photos = [
-  { src: "/images/couple-1.jpg", alt: "Abdul Rahman & Bushrah together" },
-  { src: "/images/couple-2.jpg", alt: "Abdul Rahman & Bushrah" },
-  { src: "/images/couple-3.jpg", alt: "Abdul Rahman & Bushrah portrait" },
-  { src: "/images/couple-4.jpg", alt: "Abdul Rahman & Bushrah casual" },
+  { src: "/images/couple-hero.jpg", alt: "Abdul Rahman & Bushrah together" },
+  { src: "/images/abdulrahman-suit.jpg", alt: "Abdul Rahman — dapper in black" },
+  { src: "/images/bushrah-abaya.jpg", alt: "Bushrah — elegant navy abaya" },
+  { src: "/images/couple-2.jpg", alt: "Abdul Rahman & Bushrah embrace" },
+  { src: "/images/bushrah-pink.jpg", alt: "Bushrah — pink hijab portrait" },
+  { src: "/images/couple-3.jpg", alt: "Abdul Rahman & Bushrah — tender moment" },
+  { src: "/images/bushrah-solo-1.jpg", alt: "Bushrah — gold-embellished look" },
   { src: "/images/couple-5.jpg", alt: "Abdul Rahman & Bushrah outing" },
-  { src: "/images/bushrah-solo-1.jpg", alt: "Bushrah elegant portrait" },
-  { src: "/images/bushrah-solo-2.jpg", alt: "Bushrah side profile" },
-  { src: "/images/invitation-card.jpg", alt: "Official invitation card" },
+  { src: "/images/bushrah-solo-2.jpg", alt: "Bushrah — side profile" },
+  { src: "/images/couple-1.jpg", alt: "Abdul Rahman & Bushrah — holding hands" },
 ];
 
 export default function Gallery() {
