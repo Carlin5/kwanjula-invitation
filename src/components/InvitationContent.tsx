@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 import HeroSection from "./sections/HeroSection";
 import CoupleSection from "./sections/CoupleSection";
 import EventDetails from "./sections/EventDetails";
@@ -16,58 +15,47 @@ export default function InvitationContent() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
 
-  const bgGradient = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.6, 1],
-    [
-      "linear-gradient(180deg, #faf3e0 0%, #f5e6c8 100%)",
-      "linear-gradient(180deg, #f5e6c8 0%, #fff8f0 100%)",
-      "linear-gradient(180deg, #fff8f0 0%, #f0e4c8 100%)",
-      "linear-gradient(180deg, #f0e4c8 0%, #1a1a2e 100%)",
-    ]
-  );
-
   return (
     <motion.div
       ref={containerRef}
-      className="relative"
-      style={{ background: bgGradient }}
+      className="relative bg-[var(--black)]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.2 }}
     >
-      {/* Progress bar */}
+      {/* Animated progress bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-[2px] z-50 origin-left"
         style={{
           scaleX: scrollYProgress,
           background: "linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold))",
+          boxShadow: "0 0 10px var(--gold), 0 0 20px var(--gold-dark)",
         }}
       />
 
       <HeroSection />
 
-      <SectionDivider icon="♦" />
+      <AnimatedDivider />
 
       <CoupleSection />
 
-      <SectionDivider icon="✦" />
+      <AnimatedDivider />
 
       <EventDetails />
 
-      <SectionDivider icon="◈" />
+      <AnimatedDivider />
 
       <Countdown />
 
-      <SectionDivider icon="❋" />
+      <AnimatedDivider />
 
       <Gallery />
 
-      <SectionDivider icon="♦" />
+      <AnimatedDivider />
 
       <VideoSection />
 
-      <SectionDivider icon="✦" />
+      <AnimatedDivider />
 
       <RSVPSection />
 
@@ -76,21 +64,45 @@ export default function InvitationContent() {
   );
 }
 
-function SectionDivider({ icon }: { icon: string }) {
+function AnimatedDivider() {
   return (
     <motion.div
-      className="flex items-center justify-center py-8 px-4"
+      className="relative py-12 flex items-center justify-center overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
-      <div className="gold-divider flex-1 max-w-[100px]" />
-      <span className="mx-4 text-[var(--gold)] text-xl">{icon}</span>
-      <div className="gold-divider flex-1 max-w-[100px]" />
+      <motion.div
+        className="absolute w-[300px] h-[300px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%)",
+        }}
+        animate={{ scale: [0.8, 1.2, 0.8], rotate: [0, 180, 360] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+      />
+      <div className="flex items-center gap-4 z-10">
+        <motion.div
+          className="h-[1px] w-16 md:w-24"
+          style={{ background: "linear-gradient(90deg, transparent, var(--gold))" }}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        />
+        <motion.div
+          className="w-3 h-3 rotate-45 border border-[var(--gold)]"
+          animate={{ rotate: [45, 225, 405] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="h-[1px] w-16 md:w-24"
+          style={{ background: "linear-gradient(270deg, transparent, var(--gold))" }}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        />
+      </div>
     </motion.div>
   );
-}
-
-function GoldOrnament() {
-  return null;
 }
