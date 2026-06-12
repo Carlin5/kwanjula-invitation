@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mr Abdul Rahman & Mrs Bushrah | Kwanjula Invitation",
     description: "Together with our families, we invite you to our introduction ceremony. Bwebajja Gardens, 28th June 2026.",
-    images: ["/images/couple-1.jpg"],
+    images: ["/images/couple-hero.jpg"],
   },
 };
 

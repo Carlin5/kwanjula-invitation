@@ -9,18 +9,20 @@ interface Particle {
   size: number;
   duration: number;
   delay: number;
+  opacity: number;
 }
 
 export default function GoldenParticles() {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const generated: Particle[] = Array.from({ length: 15 }).map((_, i) => ({
+    const generated: Particle[] = Array.from({ length: 25 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
-      size: Math.random() * 6 + 2,
-      duration: Math.random() * 8 + 6,
-      delay: Math.random() * 10,
+      size: Math.random() * 4 + 1,
+      duration: Math.random() * 10 + 8,
+      delay: Math.random() * 12,
+      opacity: Math.random() * 0.5 + 0.2,
     }));
     setParticles(generated);
   }, []);
@@ -37,12 +39,12 @@ export default function GoldenParticles() {
             left: `${p.x}%`,
             bottom: -20,
             background: `radial-gradient(circle, var(--gold-light), var(--gold))`,
-            boxShadow: "0 0 6px var(--gold-light)",
+            boxShadow: `0 0 ${p.size * 2}px var(--gold-light)`,
           }}
           animate={{
-            y: [0, -window.innerHeight - 50],
-            opacity: [0, 1, 1, 0],
-            x: [0, Math.sin(p.id) * 30],
+            y: [0, -(typeof window !== "undefined" ? window.innerHeight : 800) - 50],
+            opacity: [0, p.opacity, p.opacity, 0],
+            x: [0, Math.sin(p.id * 0.7) * 40],
           }}
           transition={{
             duration: p.duration,
