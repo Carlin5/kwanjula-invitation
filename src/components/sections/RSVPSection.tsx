@@ -67,24 +67,37 @@ export default function RSVPSection() {
           />
 
           <div className="relative z-10">
+            {/* Contact 1 */}
             <div className="mb-8">
-              <p className="text-xs text-[var(--gold)] tracking-[0.3em] uppercase mb-3">Contact</p>
+              <p className="text-xs text-[var(--gold)] tracking-[0.3em] uppercase mb-3">Contact 1</p>
               <p
                 className="text-3xl text-white"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Juma Kagwe
               </p>
-            </div>
-
-            <div className="mb-10">
-              <p className="text-xs text-[var(--gold)] tracking-[0.3em] uppercase mb-3">Phone</p>
               <a
                 href="tel:+256753070502"
-                className="text-2xl text-white hover:text-[var(--gold)] transition-colors duration-300"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-lg text-white/70 hover:text-[var(--gold)] transition-colors duration-300 mt-1 inline-block"
               >
                 +256 753 070502
+              </a>
+            </div>
+
+            {/* Contact 2 */}
+            <div className="mb-10">
+              <p className="text-xs text-[var(--gold)] tracking-[0.3em] uppercase mb-3">Contact 2</p>
+              <p
+                className="text-3xl text-white"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Kabanda Scott
+              </p>
+              <a
+                href="tel:+256740936292"
+                className="text-lg text-white/70 hover:text-[var(--gold)] transition-colors duration-300 mt-1 inline-block"
+              >
+                +256 740 936292
               </a>
             </div>
 
@@ -107,8 +120,8 @@ export default function RSVPSection() {
               RSVP via WhatsApp
             </motion.a>
 
-            {/* Direct call */}
-            <div className="mt-4">
+            {/* Direct call buttons */}
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
               <motion.a
                 href="tel:+256753070502"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-[var(--gold)] border border-[var(--gold)]/40 transition-all"
@@ -116,7 +129,16 @@ export default function RSVPSection() {
                 whileTap={{ scale: 0.95 }}
               >
                 <span>📞</span>
-                Call to RSVP
+                Call Juma
+              </motion.a>
+              <motion.a
+                href="tel:+256740936292"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-[var(--gold)] border border-[var(--gold)]/40 transition-all"
+                whileHover={{ scale: 1.05, borderColor: "rgba(201,168,76,0.8)", boxShadow: "0 0 20px rgba(201,168,76,0.2)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>📞</span>
+                Call Kabanda
               </motion.a>
             </div>
           </div>

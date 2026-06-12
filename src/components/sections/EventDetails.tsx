@@ -107,7 +107,7 @@ export default function EventDetails() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Mr Abdul Rahman
+              Abdul Rahman
             </motion.h3>
 
             <div className="flex items-center justify-center gap-4 my-4">
@@ -143,7 +143,7 @@ export default function EventDetails() {
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Mrs Bushrah
+              Bushrah
             </motion.h3>
 
             <p className="text-white/60 italic text-sm mb-2">

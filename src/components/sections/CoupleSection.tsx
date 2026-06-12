@@ -61,7 +61,7 @@ export default function CoupleSection() {
           >
             <Image
               src="/images/abdulrahman-suit.jpg"
-              alt="Mr Abdul Rahman"
+              alt="Abdul Rahman"
               fill
               className="object-cover object-top"
             />
@@ -80,7 +80,7 @@ export default function CoupleSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Mr Abdul Rahman
+            Abdul Rahman
           </motion.h3>
           <motion.p
             className="text-[var(--gold)] text-sm tracking-[0.3em] uppercase mt-2"
@@ -111,8 +111,8 @@ export default function CoupleSection() {
             transition={{ duration: 0.4 }}
           >
             <Image
-              src="/images/bushrah-abaya.jpg"
-              alt="Mrs Bushrah"
+              src="/images/bushrah-profile.jpg"
+              alt="Bushrah"
               fill
               className="object-cover object-top"
             />
@@ -131,7 +131,7 @@ export default function CoupleSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Mrs Bushrah
+            Bushrah
           </motion.h3>
           <motion.p
             className="text-[var(--gold)] text-sm tracking-[0.3em] uppercase mt-2"
