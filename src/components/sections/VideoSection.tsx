@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const videos = [
   { src: "/videos/video-1.mp4", poster: "/images/couple-hero.jpg" },
-  { src: "/videos/video-2.mp4", poster: "/images/couple-2.jpg" },
-  { src: "/videos/video-3.mp4", poster: "/images/couple-3.jpg" },
+  { src: "/videos/video-2.mp4", poster: "/images/gallery-2.jpg" },
+  { src: "/videos/video-3.mp4", poster: "/images/gallery-6.jpg" },
 ];
 
 export default function VideoSection() {

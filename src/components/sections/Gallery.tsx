@@ -5,14 +5,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 const photos = [
-  { src: "/images/couple-hero.jpg", alt: "Abdul Rahman & Bushrah together" },
-  { src: "/images/abdulrahman-suit.jpg", alt: "Abdul Rahman — dapper in black" },
-  { src: "/images/bushrah-abaya.jpg", alt: "Bushrah — elegant navy abaya" },
-  { src: "/images/couple-2.jpg", alt: "Abdul Rahman & Bushrah embrace" },
-  { src: "/images/bushrah-pink.jpg", alt: "Bushrah — pink hijab portrait" },
-  { src: "/images/couple-3.jpg", alt: "Abdul Rahman & Bushrah — tender moment" },
-  { src: "/images/couple-5.jpg", alt: "Abdul Rahman & Bushrah outing" },
-  { src: "/images/couple-1.jpg", alt: "Abdul Rahman & Bushrah — holding hands" },
+  { src: "/images/gallery-1.jpg", alt: "Bushrah — radiant smile" },
+  { src: "/images/gallery-2.jpg", alt: "Abdul Rahman — traditional elegance" },
+  { src: "/images/gallery-3.jpg", alt: "Abdul Rahman — regal pose" },
+  { src: "/images/gallery-4.jpg", alt: "Abdul Rahman — sharing tea with a friend" },
+  { src: "/images/gallery-5.jpg", alt: "Abdul Rahman — a warm moment" },
+  { src: "/images/gallery-6.jpg", alt: "Bushrah — graceful in black" },
 ];
 
 export default function Gallery() {
